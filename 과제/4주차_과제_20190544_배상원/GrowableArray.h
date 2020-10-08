@@ -25,7 +25,8 @@ T& GrowableArray<T>::operator [](int i) {
 		T *Ndata = new T[Nlen];
 
 		for(int k = 0; k < this -> len; k++) 
-			this -> data[k] = Ndata[k];
+			/*this -> data[k] = Ndata[k];*/
+			Ndata[k] = this -> data[k];
 
 		for(int j = this -> len; j < Nlen; j++) 
 			Ndata[j] = 0;
